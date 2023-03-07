@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="arpi" fetch="https://github.com/android-rpi"/>
+  <remote name="apvr" fetch="https://github.com/android-pvr"/>
 
   <remove-project name="platform/frameworks/av"/>
-  <project path="frameworks/av" name="frameworks_av" revision="arpi-13" remote="arpi"/>
+  <project path="frameworks/av" name="frameworks_av" revision="arpi-13" remote="apvr"/>
   <remove-project name="platform/external/mesa3d"/>
-  <project path="external/mesa3d" name="external_mesa3d" revision="v3d-22.2" remote="arpi"/>
-  <remove-project name="platform/external/v4l2_codec2"/>
-  <project path="external/v4l2_codec2" name="external_v4l2_codec2" revision="arpi-13" remote="arpi"/>
+  <project path="external/mesa3d" name="external_mesa3d" revision="mt8173" remote="apvr"/>
+  <remove-project name="platform/external/swiftshader"/>
+  <project path="external/swiftshader" name="external_swiftshader" revision="arpi-13-swiftshader" remote="apvr"/>
 
   <remove-project name="platform/build"/>
-  <project path="build/make" name="build_make" revision="arpi-13" remote="arpi">
+  <project path="build/make" name="build_make" revision="arpi-13" remote="apvr">
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
     <linkfile src="core" dest="build/core" />
     <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
-  </project>  
+  </project>
 
-  <remove-project name="platform/hardware/broadcom/libbt"/>
-  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" revision="arpi-13" remote="arpi"/>
-  <remove-project name="platform/hardware/interfaces"/>
-  <project path="hardware/interfaces" name="hardware_interfaces" revision="arpi-13" remote="arpi"/>
-
-  <project path="hardware/arpi" name="hardware_arpi" revision="arpi-12" remote="arpi"/>
-  <project path="device/arpi/rpi4" name="device_arpi_rpi4" revision="arpi-13" remote="arpi"/>
-
-  <project path="vendor/arpi/RpLauncher" name="RpLauncher" revision="arpi-12" remote="arpi"/>
+  <project path="vendor/arpi/RpLauncher" name="RpLauncher" revision="arpi-12" remote="apvr"/>
+  <project path="hardware/apvr" name="hardware_apvr" revision="apvr-13" remote="apvr"/>
+  <project path="device/apvr/mt8173" name="device_apvr_mt8173" revision="apvr-13" remote="apvr"/>
 </manifest>
