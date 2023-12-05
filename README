@@ -1,8 +1,8 @@
 # Download Android source with local_manifests
  Refer to http://source.android.com/source/downloading.html
 
- $ repo init -u https://android.googlesource.com/platform/manifest -b android-13.0.0_r35
- $ git clone https://github.com/android-pvr/local_manifests .repo/local_manifests -b apvr-13
+ $ repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r15
+ $ git clone https://github.com/android-pvr/local_manifests .repo/local_manifests -b apvr-14
  $ repo sync
 
 # Build for MT8173
